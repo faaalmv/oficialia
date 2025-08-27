@@ -199,12 +199,12 @@ export function DocumentTableClient({
                       <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
                         <DropdownMenuSeparator />
-                        <Link href={`/documents/${doc.id}`} passHref>
+                        <Link href={`/documents/${doc.id}`} passHref legacyBehavior>
                           <DropdownMenuItem asChild className="cursor-pointer">
                             <a><Eye className="mr-2 h-4 w-4" /> View</a>
                           </DropdownMenuItem>
                         </Link>
-                        <Link href={`/documents/${doc.id}/edit`} passHref>
+                        <Link href={`/documents/${doc.id}/edit`} passHref legacyBehavior>
                           <DropdownMenuItem asChild disabled={doc.status !== 'Draft'} className="cursor-pointer">
                             <a><Edit className="mr-2 h-4 w-4" /> Edit</a>
                           </DropdownMenuItem>

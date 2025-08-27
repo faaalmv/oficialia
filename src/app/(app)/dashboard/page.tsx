@@ -87,7 +87,7 @@ export default async function DashboardPage() {
                 A quick look at your most recent documents.
               </CardDescription>
             </div>
-            <Link href="/documents">
+            <Link href="/documents" legacyBehavior>
                 <Button variant="outline" size="sm">
                     View All
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -109,7 +109,10 @@ export default async function DashboardPage() {
                 {recentDocuments.map((doc) => (
                   <TableRow key={doc.id}>
                     <TableCell className="font-medium">
-                        <Link href={`/documents/${doc.id}`} className="hover:underline text-primary">
+                        <Link
+                          href={`/documents/${doc.id}`}
+                          className="hover:underline text-primary"
+                          legacyBehavior>
                             {doc.id}
                         </Link>
                     </TableCell>

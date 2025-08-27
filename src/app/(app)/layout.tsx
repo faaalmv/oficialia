@@ -133,7 +133,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
               {pathname.split('/').pop()?.replace('-', ' ') || 'Dashboard'}
             </h1>
           </div>
-          <Link href="/documents/new">
+          <Link href="/documents/new" legacyBehavior>
             <Button>
               <PlusCircle className="mr-2 h-4 w-4" />
               Create Document
